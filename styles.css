@@ -94,6 +94,10 @@
 .equal p {
 	color: white;
 }
+.delete {
+	cursor: pointer;
+	color: rgb(95, 95, 95);
+}
 
 footer {
 	position: absolute;
