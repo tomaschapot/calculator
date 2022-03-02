@@ -45,8 +45,10 @@
 	color: rgb(143, 143, 143);
 }
 .support-button.clear {
-	background-color: rgb(177, 255, 229);
+	background-color: rgb(87, 140, 253);
 	font-weight: bold;
+	color: white;
+	cursor: pointer;
 }
 
 .inputs {
@@ -76,6 +78,7 @@
 
 .button:hover {
 	background-color: rgb(207, 207, 207);
+	cursor: pointer;
 }
 
 .button p {
@@ -85,8 +88,11 @@
 }
 
 .equal {
-	background-color: rgb(177, 255, 229);
+	background-color: rgb(87, 140, 253);
 	font-weight: bold;
+}
+.equal p {
+	color: white;
 }
 
 footer {
