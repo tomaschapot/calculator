@@ -16,6 +16,7 @@ const $equal = document.querySelector(".equal");
 const $operationsList = document.querySelectorAll(".operation");
 const $numbers = document.querySelectorAll(".number");
 const $dotButton = document.querySelector(".dot");
+const $eraseButton = document.querySelector(".delete");
 
 // Calculator Operations Functions
 
@@ -48,6 +49,21 @@ function operate(number1, number2, operationSimbol) {
 
 function displayResult(operation) {
 	$screen.value = operation;
+}
+
+function addDot() {
+	$dotButton.addEventListener("click", () => {
+		$screen.value = $screen.value + ".";
+	});
+}
+
+function erase() {
+	$eraseButton.addEventListener("click", () => {
+		let screenValue = Array.from($screen.value);
+		screenValue.pop();
+		let string = screenValue.join("");
+		$screen.value = string;
+	});
 }
 
 function clear() {
@@ -92,14 +108,12 @@ function equalInput() {
 }
 
 function calculus() {
+	erase();
 	clear();
+	addDot();
 	buttonsInput();
 	operationInput();
 	equalInput();
 }
 
 calculus();
-
-// store number input when user presses an operator.
-// save chosen operation to pass on operate
-// when the user presses =, pass the second number and operate.
